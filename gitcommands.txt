@@ -1,0 +1,71 @@
+git - it is a version control system which is an open source.
+git usefull commands :
+git config 
+       it is used to config the git i.e creating a account
+                  git config --global user.name "user name"
+                  git config --global user.email "email"
+                  git config --global push.default simple
+ 
+
+Creating a new repository: two kinds of repositories: 1. Bare 
+repository(central repository): store and share files but no 
+modifications. Command for creating a new repository:  git init --bare 
+2. Non-bare repository(local repositories): Users can do modifications 
+for files. 
+Command for creating a new repository: git init 
+Bare repositories do not have a working copy and you can push to 
+them.So, in short, you can't push to a non-bare repository.  
+(git pull) is the command for which you will use to sync or update your 
+workspace with respect to the latest commit id or changes present in the 
+central repository. 
+Branching: 
+
+git branch : it lists all your branches 
+
+git branch branchname : to create a new branch 
+
+git checkout branchname: to switch to the other branch   
+
+You cannot merge between branches of a different repository. 
+
+git merge: git merge new_branch master(to merge the contents between 
+new_branch to the master branch) 
+
+Merge conflicts: developers need to fix it. 
+
+git stash 
+
+git stash list: to check the stash list. 
+
+Git stores the stash as an array. Stash array. 
+
+git stash apply stash{1} 
+
+git stash pop (stash will remove the entry in the array)   
+
+Reverting Changes: 
+
+git reset <file> 
+
+git reset –soft : Move only to Head Pointer 
+
+git reset –mixed: Move the head pointer & reset the staging area 
+
+git reset –hard:Move the head pointer, resets staging area & working 
+tree to the new head 
+
+git checkout <commitid>: traverse between the commit id of the same 
+branch 
+
+git clean : will remove all the untracked files without showing the 
+untracked files  
+
+git clean –n : to verify the untracked files 
+
+git clean –f : to remove the untracked files 
+Git tags: 
+Tags acts as a quick reference to the particular commit id. 
+
+Apply a tag to a commit: git tag -a pattern -m "comment" <commitid> 
+
+Display list of tags: git tag 
